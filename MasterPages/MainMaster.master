@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMaster.master.cs" Inherits="MasterPages_MainMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="row-fluid">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+
+                            </button>
+                            <a class="navbar-brand" href="/default.aspx">Mary's Pizzeria</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/OrderForm.aspx">Order Online</a></li>
+                                <li id="liToppings" runat="server"><a href="/Members/Toppings.aspx">Toppings</a></li>
+                                <li id="liOrders" runat="server"><a href="/Members/Orders.aspx">Orders</a></li>
+                            </ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li id="liLogin" runat="server"><a href="/login.aspx">Login</a></li>
+                                <li id="liLogout" runat="server"><a href="/logout.aspx">Logout</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </div>
+            <div class="row-fluid">
+                <div class="panel-body">
+                    <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="panel-footer" id="footer">&copy; 2014 Mary's Pizzeria</div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>
